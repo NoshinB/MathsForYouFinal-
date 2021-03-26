@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------
 # General
---------------------------------------------------------------*/ 
+--------------------------------------------------------------*/
 body {
   font-family: 'Poppins', sans-serif !important;
   color: #444444;
@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #98FB98; 
+  color: #98FB98;
 }
 
 a:hover {
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   background: rgba(152,252,152,0.3);
     width: 100% !important;
-    
+
 }
 
 #header .header-container {
@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #98FB98;   
+  color: #98FB98;
     font-size: 15px;
 }
 
@@ -819,13 +819,13 @@ div.desc {
 .container {
   padding: 0 16px;
 }
-    
+
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
-    
+
 h2 {
         color:  black;
     }
@@ -1292,6 +1292,80 @@ h2 {
     font-family: 'Poppins', sans-serif !important;
     LINE-HEIGHT:20px;
 }
+
+
+/* Quiz */
+.quiz-container {
+    padding: 0.5em;
+    max-width: 650px;
+    margin: 2em auto;
+}
+
+#quiz-header,
+#quiz-start-screen,
+#quiz-results-screen,
+#quiz-counter {
+    text-align: center;
+}
+
+.answers {
+    list-style: none;
+    padding: 0;
+}
+
+.answers a {
+    display: block;
+    padding: 0.5em 1em;
+    margin-bottom: 0.5em;
+    background: pink;
+}
+
+.answers a.correct {
+    background: #090;
+}
+.answers a.incorrect {
+    background: #c00;
+}
+
+.answers a.correct,
+.answers a.incorrect {
+    color: #fff;
+}
+
+#quiz-controls {
+    background: #63c5bc;
+    color: #111;
+    padding: 0.25em 0.5em 0.5em;
+    text-align: center;
+}
+
+#quiz-response {}
+#quiz-results {
+    font-size: 1.25em;
+}
+
+#quiz-buttons a,
+.quiz-container .quiz-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background: #88449a;
+    color: #fff;
+}
+#quiz-buttons a {
+    background: #fff;
+    color: #333;
+}
+
+/* Quiz State Overrides */
+.quiz-results-state #quiz-controls {
+    background: none;
+    padding: 0;
+}
+.quiz-results-state #quiz-buttons a {
+    background: #88449a;
+    color: #fff;
+}
+
 
 /*--------------------------------------------------------------
 # Footer

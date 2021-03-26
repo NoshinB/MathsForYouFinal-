@@ -74,97 +74,58 @@
     </div>
   </header><!-- End Header -->
 
-  <div id="quiz">
+<!-- Game characters -->
+<section id="why-us" class="why-us">
+  <div class="container">
+    <div class="row">
+        <div class="icon-boxes d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-lg-4" style="background-color: #FFFAFA;">
+              <div class="icon"><a href="year3l.html"><i><img src="assets/img/games/year3/gamenarator.png" width="100%;" height="auto" style="border-radius: 10px;" alt="Mr Green icon" data-toggle="tooltip" title="Answer the questions below by clicking the correct answer"></i></a></div><br>
+              <h5 style="text-align: center;"> I'm Mr Green, your Narrator <br> Visit me to find out the instructions </h5>
+            </div>
+            <div class="col-lg-1 d-flex align-items-center">
+            </div>
+            <div class="col-lg-2 d-flex align-items-center">
+              <!--          text to speech html-->
+              <button id=play data-toggle="tooltip" title="Click to read text aloud"></button> &nbsp;
+            	<button id=pause data-toggle="tooltip" title="Click to pause reading"></button> &nbsp;
+            	<button id=stop data-toggle="tooltip" title="Click to reset reading"></button>
+            </div>
+            <div class="col-lg-1 d-flex align-items-center">
+            </div>
+            <div class="col-lg-4" style="background-color: #FFFAFA;">
+                  <div class="icon"><a href="year3l.html"><i><img src="assets/img/games/year3/gamehelper.png" width="100%;" height="auto" style="border-radius: 10px;" alt="Ms Purple icon" data-toggle="tooltip" title="Need help? Click me to go back to the learning pages"></i></a></div><br>
+                  <h5 style="text-align: center;"> I'm Ms Purple, your Helper <br> Visit me at any time for any help </h5>
+            </div>
+          </div>
+        </div><!-- End .content-->
+      </div>
+    </div>
+
+<!-- Quiz section -->
+<!-- Quiz html -->
+<article>
+  <div id="quiz"><br>
     <div id="quiz-header">
-      <h1>Year 3 - Treasure Hunter</h1>
+      <h1>Year 3 - Treasure Hunter</h1><br>
+      <h6>Quesions from BBC Bitesize <h6><br>
     </div>
     <div id="quiz-start-screen">
-      <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
+      <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p><br>
     </div>
   </div>
+</div>
+</article>
+</section>
 
-<style>
-.quiz-container {
-    padding: 0.5em;
-    max-width: 650px;
-    margin: 2em auto;
-}
+<section id="why-us" class="why-us">
+  <div class="container">
+        <!-- Whiteboard -->
+</div>
+</section>
 
-.quiz-container a {
-    text-decoration: none;
-}
-
-#quiz-header,
-#quiz-start-screen,
-#quiz-results-screen,
-#quiz-counter {
-    text-align: center;
-}
-
-.question {
-    font-size: 1.35em;
-}
-
-.answers {
-    list-style: none;
-    padding: 0;
-}
-
-.answers a {
-    display: block;
-    padding: 0.5em 1em;
-    margin-bottom: 0.5em;
-    background: pink;
-}
-
-.answers a.correct {
-    background: #090;
-}
-.answers a.incorrect {
-    background: #c00;
-}
-
-.answers a.correct,
-.answers a.incorrect {
-    color: #fff;
-}
-
-#quiz-controls {
-    background: #63c5bc;
-    color: #111;
-    padding: 0.25em 0.5em 0.5em;
-    text-align: center;
-}
-
-#quiz-response {}
-#quiz-results {
-    font-size: 1.25em;
-}
-
-#quiz-buttons a,
-.quiz-container .quiz-button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    background: #88449a;
-    color: #fff;
-}
-#quiz-buttons a {
-    background: #fff;
-    color: #333;
-}
-
-/* Quiz State Overrides */
-
-.quiz-results-state #quiz-controls {
-    background: none;
-    padding: 0;
-}
-.quiz-results-state #quiz-buttons a {
-    background: #88449a;
-    color: #fff;
-}
-</style>
-
+<!-- quiz js -->
 <script>
 $('#quiz').quiz({
   //resultsScreen: '#results-screen',
@@ -173,52 +134,204 @@ $('#quiz').quiz({
   counterFormat: 'Question %current of %total',
   questions: [
     {
-      'q': 'Is jQuery required for this plugin?',
+      'q': 'Sofia has 25 books and Amira has 14 books',
       'options': [
-        'Yes',
-        'No'
+        '11',
+        '39',
+        '31',
+        '24'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'Becky buys an apple for 36p and a banana for 25p.',
+      'options': [
+        '61p',
+        '59p',
+        '51p',
+        '24p'
       ],
       'correctIndex': 0,
       'correctResponse': 'Well done! Great work!',
       'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
     },
     {
-      'q': 'How do you use it?',
+      'q': 'Oscar has some fabric that is 57 cm long. He cuts a piece 31 cm long. How long is the piece of fabric that is leftover?',
       'options': [
-        'Include jQuery, that\'s it!',
-        'Include jQuery and the plugin javascript.',
-        'Include jQuery, the plugin javascript, the optional plugin css, required markup, and the javascript configuration.'
+        '32cm',
+        '26cm',
+        '88cm',
+        '28cm'
       ],
-      'correctIndex': 2,
-      'correctResponse': 'Correct! Sounds more complicated than it really is.',
-      'incorrectResponse': 'Come on, it\'s not that easy!'
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
     },
     {
-      'q': 'The plugin can be configured to require a perfect score.',
+      'q': 'In a shop, fruit costs 48p and drinks cost 65p. How much more does a drink cost?',
       'options': [
-        'True',
-        'False'
+        '5p',
+        '17p',
+        '33p',
+        '23p'
       ],
-      'correctIndex': 0,
-      'correctResponse': 'You\'re a genius! You just set allowIncorrect to true.',
-      'incorrectResponse': 'Why you have no faith!? Just set allowIncorrect to true.'
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
     },
     {
-      'q': 'How do you specify the questions and answers?',
+      'q': 'What is 6 × 3?',
       'options': [
-        'MySQL database',
-        'In the HTML',
-        'In the javascript configuration'
+        '9',
+        '18',
+        '24',
+        '58'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 24 ÷ 8?',
+      'options': [
+        '9',
+        '3',
+        '8',
+        '4'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 13 × 3?',
+      'options': [
+        '46',
+        '33',
+        '39',
+        '42'
       ],
       'correctIndex': 2,
-      'correctResponse': 'Correct! Refer to the documentation for the structure.',
-      'incorrectResponse': 'Wrong! Do it in the javascript configuration. You might need to read the documentation.'
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 28 ÷ 4?',
+      'options': [
+        '6',
+        '4',
+        '2',
+        '7'
+      ],
+      'correctIndex': 3,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 6 x 40?',
+      'options': [
+        '46',
+        '400',
+        '225',
+        '240'
+      ],
+      'correctIndex': 3,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 16 ÷ 2?',
+      'options': [
+        '6',
+        '8',
+        '12',
+        '4'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
     }
   ]
 });
 </script>
 
+<!-- Tooltips -->
+<script>
+$(document).ready(function(){
+$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
+<!--     text to speech JS-->
+     <script>
+        onload = function() {
+	if ('speechSynthesis' in window) with(speechSynthesis) {
+
+		var playEle = document.querySelector('#play');
+		var pauseEle = document.querySelector('#pause');
+		var stopEle = document.querySelector('#stop');
+		var flag = false;
+
+		playEle.addEventListener('click', onClickPlay);
+		pauseEle.addEventListener('click', onClickPause);
+		stopEle.addEventListener('click', onClickStop);
+
+		function onClickPlay() {
+			if (!flag) {
+				flag = true;
+				utterance = new SpeechSynthesisUtterance(document.querySelector('article').textContent);
+				utterance.voice = getVoices()[0];
+				utterance.onend = function() {
+					flag = false;
+					playEle.className = pauseEle.className = '';
+					stopEle.className = 'stopped';
+				};
+				playEle.className = 'played';
+				stopEle.className = '';
+				speak(utterance);
+			}
+			if (paused) { /* unpause/resume narration */
+				playEle.className = 'played';
+				pauseEle.className = '';
+				resume();
+			}
+		}
+
+		function onClickPause() {
+			if (speaking && !paused) { /* pause narration */
+				pauseEle.className = 'paused';
+				playEle.className = '';
+				pause();
+			}
+		}
+
+		function onClickStop() {
+			if (speaking) { /* stop narration */
+				/* for safari */
+				stopEle.className = 'stopped';
+				playEle.className = pauseEle.className = '';
+				flag = false;
+				cancel();
+
+			}
+		}
+
+	}
+
+	else { /* speech synthesis not supported */
+		msg = document.createElement('h5');
+		msg.textContent = "Detected no support for Speech Synthesis";
+		msg.style.textAlign = 'center';
+		msg.style.backgroundColor = 'red';
+		msg.style.color = 'white';
+		msg.style.marginTop = msg.style.marginBottom = 0;
+		document.body.insertBefore(msg, document.querySelector('div'));
+	}
+
+}
+        </script>
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
