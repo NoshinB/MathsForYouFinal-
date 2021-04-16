@@ -23,10 +23,13 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/jchamill/jquery-quiz/master/src/jquery.quiz.css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://jchamill.github.io/jquery-quiz/jquery.quiz-min.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -70,19 +73,265 @@
       </div><!-- End Header Container -->
     </div>
   </header><!-- End Header -->
-    
 
-        
-<!--        Main content -->
- <main id="main">
-     
-     <!-- ======= Hero Section ======= --> 
-<img src="assets/img/home1.jpg" alt="Child using the laptop" style="width: 100%;">
+<!-- Game characters -->
+<section id="why-us" class="why-us">
+  <div class="container">
+    <div class="row">
+        <div class="icon-boxes d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-lg-4" style="background-color: #FFFAFA;">
+              <div class="icon"><i><img src="assets/img/games/year3/gamenarator.png" width="100%;" height="auto" style="border-radius: 10px;" alt="Mr Green icon" data-toggle="tooltip" title="Answer the questions below by clicking the correct answer"></i></a></div><br>
+              <h5 style="text-align: center;"> I'm Mr Green, your Narrator <br> Visit me to find out the instructions </h5>
+            </div>
+            <div class="col-lg-1 d-flex align-items-center">
+            </div>
+            <div class="col-lg-2 d-flex align-items-center">
+              <!--          text to speech html-->
+              <button id=play data-toggle="tooltip" title="Click to read text aloud"></button> &nbsp;
+            	<button id=pause data-toggle="tooltip" title="Click to pause reading"></button> &nbsp;
+            	<button id=stop data-toggle="tooltip" title="Click to reset reading"></button>
+            </div>
+            <div class="col-lg-1 d-flex align-items-center">
+            </div>
+            <div class="col-lg-4" style="background-color: #FFFAFA;">
+                  <div class="icon"><a href="year5l.html"><i><img src="assets/img/games/year3/gamehelper.png" width="100%;" height="auto" style="border-radius: 10px;" alt="Ms Purple icon" data-toggle="tooltip" title="Need help? Click me to go back to the learning pages"></i></a></div><br>
+                  <h5 style="text-align: center;"> I'm Ms Purple, your Helper <br> Visit me at any time for any help </h5>
+            </div>
+          </div>
+        </div><!-- End .content-->
+      </div>
+    </div>
 
-<!--     -->
-</main>
-        
+<!-- Quiz section -->
+<!-- Quiz html -->
+<article>
+  <div id="quiz"><br>
+    <div id="quiz-header">
+      <h1>Year 5 - Treasure Hunter</h1><br>
+      <h6>Quesions from BBC Bitesize <h6><br>
+    </div>
+    <div id="quiz-start-screen">
+      <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p><br>
+    </div>
+  </div>
+</div>
+</article>
 
+<!-- whiteboard html and js -->
+<div id="canvas" style="padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px; text-align: center; font-weight:bold; font-size: 20px;">Whiteboard for your Notes<br/></div>
+
+  <script src="whiteboard.js"></script>
+</section>
+
+<!-- quiz js -->
+<script>
+$('#quiz').quiz({
+  //resultsScreen: '#results-screen',
+  //counter: false,
+  //homeButton: '#custom-home',
+  counterFormat: 'Question %current of %total',
+  questions: [
+    {
+      'q': 'Halves are always equal',
+      'options': [
+        'True',
+        'False'
+      ],
+      'correctIndex': 0,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is half of 24?',
+      'options': [
+        '14',
+        '12',
+        '15',
+        '16'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'Half of 30 is...',
+      'options': [
+        '10',
+        '13',
+        '15',
+        '20'
+      ],
+      'correctIndex': 2,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'How would you write four ones, two tenths and three hundredths as a decimal?',
+      'options': [
+        '4.32',
+        '4.23',
+        '4.023',
+        '41.23'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 48 ÷ 4?',
+      'options': [
+        '11',
+        '12',
+        '14',
+        '16'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'How many tenths are there in 14.92?',
+      'options': [
+        '2',
+        '4',
+        '1',
+        '9'
+      ],
+      'correctIndex': 3,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 13 × 3?',
+      'options': [
+        '46',
+        '33',
+        '39',
+        '42'
+      ],
+      'correctIndex': 2,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'What is 28 ÷ 4?',
+      'options': [
+        '6',
+        '4',
+        '2',
+        '7'
+      ],
+      'correctIndex': 3,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': ' A packet of biscuits costs £1.99. How much would 3 packs cost?',
+      'options': [
+        '£5.99',
+        '£5.97',
+        '£6.97',
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    },
+    {
+      'q': 'True or false? A hot chocolate with marshmallows costs £2.90. You want to buy 4. The total would be £11.50.',
+      'options': [
+        'False',
+        'True'
+      ],
+      'correctIndex': 0,
+      'correctResponse': 'Well done! Great work!',
+      'incorrectResponse': 'Click on the Mr Green or Mr Purple for help'
+    }
+  ]
+});
+</script>
+
+
+<!-- Tooltips -->
+<script>
+$(document).ready(function(){
+$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<!--     text to speech JS-->
+     <script>
+        onload = function() {
+	if ('speechSynthesis' in window) with(speechSynthesis) {
+
+		var playEle = document.querySelector('#play');
+		var pauseEle = document.querySelector('#pause');
+		var stopEle = document.querySelector('#stop');
+		var flag = false;
+
+		playEle.addEventListener('click', onClickPlay);
+		pauseEle.addEventListener('click', onClickPause);
+		stopEle.addEventListener('click', onClickStop);
+
+		function onClickPlay() {
+			if (!flag) {
+				flag = true;
+				utterance = new SpeechSynthesisUtterance(document.querySelector('article').textContent);
+				utterance.voice = getVoices()[0];
+				utterance.onend = function() {
+					flag = false;
+					playEle.className = pauseEle.className = '';
+					stopEle.className = 'stopped';
+				};
+				playEle.className = 'played';
+				stopEle.className = '';
+				speak(utterance);
+			}
+			if (paused) { /* unpause/resume narration */
+				playEle.className = 'played';
+				pauseEle.className = '';
+				resume();
+			}
+		}
+
+		function onClickPause() {
+			if (speaking && !paused) { /* pause narration */
+				pauseEle.className = 'paused';
+				playEle.className = '';
+				pause();
+			}
+		}
+
+		function onClickStop() {
+			if (speaking) { /* stop narration */
+				/* for safari */
+				stopEle.className = 'stopped';
+				playEle.className = pauseEle.className = '';
+				flag = false;
+				cancel();
+
+			}
+		}
+
+	}
+
+	else { /* speech synthesis not supported */
+		msg = document.createElement('h5');
+		msg.textContent = "Detected no support for Speech Synthesis";
+		msg.style.textAlign = 'center';
+		msg.style.backgroundColor = 'red';
+		msg.style.color = 'white';
+		msg.style.marginTop = msg.style.marginBottom = 0;
+		document.body.insertBefore(msg, document.querySelector('div'));
+	}
+
+}
+        </script>
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -92,7 +341,7 @@
 
           <div class="col-lg-3 col-md-6 footer-contact">
 
-              
+
               <p><strong>Email:</strong>  noshin.begum.nb@gmail.com<br>nbegu019@gold.ac.uk</p><br>
           </div>
 
@@ -103,7 +352,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="games.html">GAMES</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about.html">ABOUT</a></li>
             </ul>
-          </div> 
+          </div>
      </div>
         </div>
       </div>
